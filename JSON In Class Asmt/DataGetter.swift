@@ -10,7 +10,7 @@ import UIKit
 
 class DataGetter: NSObject {
     
-    let MYJSONURL = "https://api.myjson.com/bins/136w0u"
+    let MYJSONURL = "https://api.myjson.com/bins/zs1by"
     
         var dataArray = [ "No data yet"]
     
@@ -31,10 +31,10 @@ class DataGetter: NSObject {
                 if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
                     
                     //printing JSON to console
-                    print(jsonObj.value(forKey: "characters")!)
+                    print(jsonObj.value(forKey: "key")!)
                     
                     //getting characters tag array frim json and converting it to NSArray
-                    if let veggieArray = jsonObj.value(forKey: "characters") as? Array<String>{ self.dataArray = veggieArray
+                    if let veggieArray = jsonObj.value(forKey: "key") as? Array<String>{ self.dataArray = veggieArray
                         
                     }
                 }
