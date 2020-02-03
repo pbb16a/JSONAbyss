@@ -25,7 +25,7 @@ class MasterViewController: UITableViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        self.title = "How to Count"
+        self.title = "IRDb"
         
         myDataGetter.getData(completion: { success in self.objects = self.myDataGetter.dataArray
             

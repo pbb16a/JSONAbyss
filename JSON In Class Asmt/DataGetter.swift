@@ -11,6 +11,8 @@ import UIKit
 class DataGetter: NSObject {
     
     let MYJSONURL = "https://api.myjson.com/bins/zs1by"
+//    let MYJSONURL = "https://api.myjson.com/bins/1e5uji"
+    //(Links to an external site.)
     
         var dataArray = [ "No data yet"]
     
@@ -34,8 +36,7 @@ class DataGetter: NSObject {
                     print(jsonObj.value(forKey: "key")!)
                     
                     //getting characters tag array frim json and converting it to NSArray
-                    if let veggieArray = jsonObj.value(forKey: "key") as? Array<String>{ self.dataArray = veggieArray
-                        
+                    if let movieArray = jsonObj.value(forKey: "key") as? Array<String>{ self.dataArray = movieArray
                     }
                 }
                 
